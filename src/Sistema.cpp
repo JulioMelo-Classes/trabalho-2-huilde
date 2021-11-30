@@ -1,4 +1,5 @@
 #include "Sistema.h"
+#include "auxiliares.h"
 #include <iostream>
 #include <sstream>
 #include <algorithm>
@@ -9,14 +10,27 @@ using namespace std;
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-
+int UserIDs =1;
 /* COMANDOS */
 string Sistema::quit() {
   return "Saindo...";
 }
 
 string Sistema::create_user (const string email, const string senha, const string nome) {
-	return "create_user NÃO IMPLEMENTADO";
+	for (int i = 0; i < Usuarios_criados.size(); i++){
+		if (email == Usuarios_criados[i].User_email){
+			return "Usuário já existe!";
+		}
+	}
+Usuario criado;
+criado.User_email = email;
+criado.User_id =UserIDs;
+UserIDs++;
+criado.User_senha = senha;
+criado.User_name = nome;
+Usuarios_criados.push_back(criado);
+
+return " Usuário criado";
 }
 
 std::string Sistema::delete_user (const std::string email, const std::string senha){

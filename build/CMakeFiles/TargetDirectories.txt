@@ -1,0 +1,3 @@
+/home/adduser/itp/trabalho-2-huilde/build/CMakeFiles/rebuild_cache.dir
+/home/adduser/itp/trabalho-2-huilde/build/CMakeFiles/edit_cache.dir
+/home/adduser/itp/trabalho-2-huilde/build/CMakeFiles/concordo.dir
