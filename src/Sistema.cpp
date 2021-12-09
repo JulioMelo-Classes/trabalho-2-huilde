@@ -1,16 +1,16 @@
 #include "Sistema.h"
-#include "auxiliares.h"
+#include "Usuario.h"
+#include "Menssagem.h"
+#include "CanalDeTexto.h"
+#include "Servidor.h"
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-
-using namespace std;
-
 #include "Sistema.h"
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-int UserIDs =1;
+using namespace std;
 /* COMANDOS */
 string Sistema::quit() {
   return "Saindo...";
@@ -18,31 +18,77 @@ string Sistema::quit() {
 
 string Sistema::create_user (const string email, const string senha, const string nome) {
 	for (int i = 0; i < Usuarios_criados.size(); i++){
-		if (email == Usuarios_criados[i].User_email){
+		if (email == Usuarios_criados[i]->get_email()){
 			return "Usuário já existe!";
 		}
 	}
-Usuario criado;
-criado.User_email = email;
-criado.User_id =UserIDs;
-UserIDs++;
-criado.User_senha = senha;
-criado.User_name = nome;
+Usuario* criado = new Usuario;
+criado->set_email(email);
+criado->set_id(Usuarios_criados.size());
+criado->set_senha(senha);
+criado->set_name(nome);
 Usuarios_criados.push_back(criado);
 
-return " Usuário criado";
+return "Usuário criado";
 }
 
 std::string Sistema::delete_user (const std::string email, const std::string senha){
-	return "delete_user NÃO IMPLEMENTADO";
+	for (int i = 0; i < Usuarios_criados.size(); i++)
+	{
+		if(Usuarios_criados[i]->get_email() == email){
+		
+			for (int k = 0; k < Usuarios_logados.size(); k++)
+			{
+				if(Usuarios_criados[i]->get_id() == Usuarios_logados[k].first){
+					return "usuário não pode ser excluido pois está logado";
+				}
+			}
+
+	Usuarios_criados[i]->set_email("email-anônimo");
+	Usuarios_criados[i]->set_id(-1);
+	Usuarios_criados[i]->set_name("Usuário removido");
+	Usuarios_criados.erase(Usuarios_criados.begin()+i);
+	return "Usuário removido";
+	}
+	
+	}
+	return "Usuário não cadastrado!";
 }
 
 string Sistema::login(const string email, const string senha) {
-	return "login NÃO IMPLEMENTADO";
+	for(int i = 0; i < Usuarios_criados.size(); i++)
+	{	
+		
+		if(Usuarios_criados[i]->get_email() == email && Usuarios_criados[i]->get_senha() == senha){
+			for (int  k = 0; k < Usuarios_logados.size(); k++)
+			{
+				if(Usuarios_criados[i]->get_id() == Usuarios_logados[k].first){
+					return "Usuário já está logado";
+				}
+			}
+			
+
+			Usuarios_logados.emplace(Usuarios_criados[i]->get_id(),make_pair(NULL,NULL));
+			std::string retorno = "Logado como:";
+			retorno += Usuarios_criados[i]->get_email();
+		return retorno;}	
+	}
+	
+
+
+
+	return "Senha ou usuário inválidos!";
 }
 
 string Sistema::disconnect(int id) {
-	return "disconnect NÃO IMPLEMENTADO";
+	for (int i = 0; i < Usuarios_logados.size(); i++)
+	{if(id==Usuarios_logados[i].first){
+		return "Ainda estou fazendo essa parte";
+	}
+	}
+	
+
+	return "Não está conectado";
 }
 
 string Sistema::create_server(int id, const string nome) {

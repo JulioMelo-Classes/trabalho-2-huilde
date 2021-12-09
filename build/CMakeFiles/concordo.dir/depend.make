@@ -3,15 +3,25 @@
 
 CMakeFiles/concordo.dir/src/Concordo.cpp.o: ../include/Executor.h
 CMakeFiles/concordo.dir/src/Concordo.cpp.o: ../include/Sistema.h
-CMakeFiles/concordo.dir/src/Concordo.cpp.o: ../include/auxiliares.h
+CMakeFiles/concordo.dir/src/Concordo.cpp.o: ../include/Usuario.h
 CMakeFiles/concordo.dir/src/Concordo.cpp.o: ../src/Concordo.cpp
 
 CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/Executor.h
 CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/Sistema.h
-CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/auxiliares.h
+CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/Usuario.h
 CMakeFiles/concordo.dir/src/Executor.cpp.o: ../src/Executor.cpp
 
+CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/CanalDeTexto.h
+CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/Menssagem.h
+CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/Servidor.h
 CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/Sistema.h
-CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/auxiliares.h
+CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../include/Usuario.h
 CMakeFiles/concordo.dir/src/Sistema.cpp.o: ../src/Sistema.cpp
+
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../include/CanalDeTexto.h
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../include/Menssagem.h
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../include/Servidor.h
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../include/Sistema.h
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../include/Usuario.h
+CMakeFiles/concordo.dir/src/Usuario.cpp.o: ../src/Usuario.cpp
 

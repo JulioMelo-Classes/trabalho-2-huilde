@@ -4,20 +4,19 @@
 #include <string>
 #include <iostream>
 #include <map>
-#include "auxiliares.h"
-
+#include "Usuario.h"
 // Sistema deve concentrar todas as operações do Concordo
 class Sistema {
 
 
 
   	public:
-	std::vector<Usuario> Usuarios_logados; // vetor cotendo os usuários logados
+	// vetor cotendo os servidores criados
+	std::map<int,pair<unsigned int, unsigned int>> Usuarios_logados; // vetor cotendo os usuários logados
+	std::vector<Usuario*> Usuarios_criados; //vetor contendo os usuários criados
 
-	std::vector<Usuario> Usuarios_criados; //vetor contendo os usuários criados
 
-
-		/*! Encerra o funcionamento do Concordo, o programa termina ao executar este comando.
+		/*! Encerra o funcionamento do Concordo,1 o programa termina ao executar este comando.
 			@return uma string com a mensagem "Saindo.."
 		*/
 		std::string quit();

@@ -204,6 +204,33 @@ src/Sistema.cpp.s:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Sistema.cpp.s
 .PHONY : src/Sistema.cpp.s
 
+src/Usuario.o: src/Usuario.cpp.o
+
+.PHONY : src/Usuario.o
+
+# target to build an object file
+src/Usuario.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Usuario.cpp.o
+.PHONY : src/Usuario.cpp.o
+
+src/Usuario.i: src/Usuario.cpp.i
+
+.PHONY : src/Usuario.i
+
+# target to preprocess a source file
+src/Usuario.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Usuario.cpp.i
+.PHONY : src/Usuario.cpp.i
+
+src/Usuario.s: src/Usuario.cpp.s
+
+.PHONY : src/Usuario.s
+
+# target to generate assembly for a file
+src/Usuario.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Usuario.cpp.s
+.PHONY : src/Usuario.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/Sistema.o"
 	@echo "... src/Sistema.i"
 	@echo "... src/Sistema.s"
+	@echo "... src/Usuario.o"
+	@echo "... src/Usuario.i"
+	@echo "... src/Usuario.s"
 .PHONY : help
 
 
