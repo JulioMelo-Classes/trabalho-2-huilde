@@ -1,5 +1,5 @@
-#ifndef MENSSAGEM.H
-#define MENSSAGEM.H
+#ifndef MENSSAGEM_H
+#define MENSSAGEM_H
 #include "Sistema.h"
 #include "Usuario.h"
 #include <istream>
@@ -7,8 +7,7 @@
 #include <sstream>
 
 class Menssagem{
-public:
-
+private:
 unsigned int Mensagem_id; //numero inteiro contendo id da mensagem
 
 string dataHora; // string contendo  um texto representando um timestamp com a data e hora em que a mensagem foi enviada no formato
@@ -16,7 +15,9 @@ string dataHora; // string contendo  um texto representando um timestamp com a d
 Usuario* Remetente; // ponteiro para o quem enviou a menssagem
 
 string conteudo ; //String com o conteúdo da menssagem
-  
+
+public:
+// a ser feito
 };
 
 #endif

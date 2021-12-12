@@ -177,6 +177,33 @@ src/Executor.cpp.s:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Executor.cpp.s
 .PHONY : src/Executor.cpp.s
 
+src/Servidor.o: src/Servidor.cpp.o
+
+.PHONY : src/Servidor.o
+
+# target to build an object file
+src/Servidor.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Servidor.cpp.o
+.PHONY : src/Servidor.cpp.o
+
+src/Servidor.i: src/Servidor.cpp.i
+
+.PHONY : src/Servidor.i
+
+# target to preprocess a source file
+src/Servidor.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Servidor.cpp.i
+.PHONY : src/Servidor.cpp.i
+
+src/Servidor.s: src/Servidor.cpp.s
+
+.PHONY : src/Servidor.s
+
+# target to generate assembly for a file
+src/Servidor.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Servidor.cpp.s
+.PHONY : src/Servidor.cpp.s
+
 src/Sistema.o: src/Sistema.cpp.o
 
 .PHONY : src/Sistema.o
@@ -246,6 +273,9 @@ help:
 	@echo "... src/Executor.o"
 	@echo "... src/Executor.i"
 	@echo "... src/Executor.s"
+	@echo "... src/Servidor.o"
+	@echo "... src/Servidor.i"
+	@echo "... src/Servidor.s"
 	@echo "... src/Sistema.o"
 	@echo "... src/Sistema.i"
 	@echo "... src/Sistema.s"

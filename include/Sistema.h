@@ -5,16 +5,15 @@
 #include <iostream>
 #include <map>
 #include "Usuario.h"
+#include "Servidor.h"
 // Sistema deve concentrar todas as operações do Concordo
 class Sistema {
-
-
-
-  	public:
+private:
 	// vetor cotendo os servidores criados
 	std::map<int,pair<unsigned int, unsigned int>> Usuarios_logados; // vetor cotendo os usuários logados
 	std::vector<Usuario*> Usuarios_criados; //vetor contendo os usuários criados
-
+	std::vector<Servidor> Servidores;
+  	public:
 
 		/*! Encerra o funcionamento do Concordo,1 o programa termina ao executar este comando.
 			@return uma string com a mensagem "Saindo.."
@@ -187,6 +186,15 @@ class Sistema {
 				@return uma string vazia em caso de sucesso ou uma mensagem de erro em caso de falha.
 		*/
 		std::string list_messages(int id);
+
+		/*! Verifica se o id está logado no sistema
+				@param id um id válido de algum usuário cadastrado e logado no sistema.
+				@return true caso o id esteja logado, false caso contrário.
+		*/
+		bool logado(unsigned int id);
+
+
+		
 };
 
 #endif

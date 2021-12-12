@@ -6,10 +6,6 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include "Sistema.h"
-#include <iostream>
-#include <sstream>
-#include <algorithm>
 #include <string>
 using namespace std;
 
