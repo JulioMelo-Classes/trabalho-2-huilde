@@ -194,6 +194,12 @@ private:
 		bool logado(unsigned int id);
 
 
+		/*! Recebe um id e retorno o ponteiro para o usuario que possui esse ID
+				@param id um id válido de algum usuário cadastrado e logado no sistema.
+				@return 
+		*/
+		Usuario* dono_id(int id);
+
 		
 };
 

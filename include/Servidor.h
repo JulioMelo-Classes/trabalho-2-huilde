@@ -27,7 +27,7 @@ std::vector<CanalTexto> canaisTexto; // vetor contendo todos os canais de texto 
 
 std::vector<Usuario*> Participantes; //Um vetor contendo referências para todos os participantes deste servidor. 
 public:
-//construtor do classe servidor
+//construtor da classe servidor
 Servidor(int id,string nome,Usuario* dono);
 
 
@@ -75,7 +75,23 @@ unsigned int get_id();
 */
 void add_participante(Usuario* participante);
 
-void add_menssagem(Menssagem menssagem);
+
+/*! retorna o array com os canais do servidor
+	@return canaisTexto
+*/
+std::vector<CanalTexto> get_canais();
+
+/*! 
+	função que incrementa o valor do id
+*/
+void aumenta_id();
+
+
+/*! adiciona um canal a string canaisTexto
+	@param canal é novo canal que será adicionado no vetor
+*/
+void add_canal(CanalTexto canal);
+
 
 
 };

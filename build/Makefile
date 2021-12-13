@@ -123,6 +123,33 @@ concordo/fast:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/build
 .PHONY : concordo/fast
 
+src/CanalTexto.o: src/CanalTexto.cpp.o
+
+.PHONY : src/CanalTexto.o
+
+# target to build an object file
+src/CanalTexto.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/CanalTexto.cpp.o
+.PHONY : src/CanalTexto.cpp.o
+
+src/CanalTexto.i: src/CanalTexto.cpp.i
+
+.PHONY : src/CanalTexto.i
+
+# target to preprocess a source file
+src/CanalTexto.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/CanalTexto.cpp.i
+.PHONY : src/CanalTexto.cpp.i
+
+src/CanalTexto.s: src/CanalTexto.cpp.s
+
+.PHONY : src/CanalTexto.s
+
+# target to generate assembly for a file
+src/CanalTexto.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/CanalTexto.cpp.s
+.PHONY : src/CanalTexto.cpp.s
+
 src/Concordo.o: src/Concordo.cpp.o
 
 .PHONY : src/Concordo.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... concordo"
+	@echo "... src/CanalTexto.o"
+	@echo "... src/CanalTexto.i"
+	@echo "... src/CanalTexto.s"
 	@echo "... src/Concordo.o"
 	@echo "... src/Concordo.i"
 	@echo "... src/Concordo.s"

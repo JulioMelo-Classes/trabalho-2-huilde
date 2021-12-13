@@ -18,7 +18,16 @@ Usuario* dono; // ponteiro para o dono do canal de texto
 
 std::vector<Menssagem> menssagens; // vetor contendo as menssagens do servidor  
 public:
-// a ser feito
+
+//construtor do classe servidor
+CanalTexto(unsigned int id,string nome,Usuario* criador );
+
+/*! retorna o nome do canal
+	@return canal_name
+*/
+
+string get_name();
+
 };
 
 

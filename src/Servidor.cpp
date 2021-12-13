@@ -43,3 +43,15 @@ void Servidor::add_participante(Usuario* participante){
     Participantes.push_back(participante);
 }
 
+std::vector<CanalTexto> Servidor::get_canais(){
+    return canaisTexto;
+}
+
+void Servidor::aumenta_id(){
+    Server_id+= 1;
+}
+
+void Servidor::add_canal(CanalTexto canal){
+    canaisTexto.push_back(canal);
+}
+

@@ -16,6 +16,16 @@ using namespace std;
 int Users_id=0; // inteiro contendo o número do id do próximo usuário que será criado
 int Servers_id = 0; // inteiro contendo o número do id do próximo servidor que será criado
 
+Usuario* Sistema::dono_id(int id){
+	for (int i = 0; i < Usuarios_criados.size(); i++)
+	{
+		if(id == Usuarios_criados[i]->get_id()){
+			return Usuarios_criados[i];
+		}
+	}
+	
+return Usuarios_criados[0];}
+
 bool Sistema::logado(unsigned int id){
 std::map<int,std::pair<unsigned int , unsigned int>>::iterator it;
   it = Usuarios_logados.find(id);
@@ -252,42 +262,71 @@ std::string retorno;
 //inteiro contendo o numero do id do servior
 int servidor = Usuarios_logados.at(id).first;
 cout<<"listando Participantes:"<<endl;
+cout<<"-----------------"<<endl;
+ Usuarios_logados.at(id).first;
 // refatorar código posteriormente
-for (int i = 0; i < Servidores.size(); i++)
+for(int i = 0; i < Servidores.size(); i++)
 {
 	if(servidor == Servidores[i].get_id()){
 		for (int k = 0; k < Servidores[i].get_Participantes().size(); k++){
-			{
+
 				cout<<Servidores[i].get_Participantes()[k]->get_name()<<endl;
-			}
+			
 		}	
 	return "-----------------";
 	}
 }
-
-
-
-
 return "-----------------";}
 
 string Sistema::list_channels(int id) {
 	if(!logado(id)){
 	return "Não está conectado";
 }
-	return "list_channels NÃO IMPLEMENTADO";
+int servidor = Usuarios_logados.at(id).first;
+
+int canal = Usuarios_logados.at(id).second;
+// refatorar código posteriormente
+cout<<"Listando canais:"<<endl<<"-----------------";
+for (int i = 0; i < Servidores[servidor].get_canais().size(); i++)
+{	
+	cout<<Servidores[servidor].get_canais()[i].get_name()<<endl;
+}
+Usuario* dono = dono_id(id); // ponteiro contendo o usuarios que digitou o comando
+
+return "-----------------";
 }
 
 string Sistema::create_channel(int id, const string nome) {
 if(!logado(id)){
 	return "Não está conectado";
 }
-	return "create_channel está sendo implementado";
+int servidor = Usuarios_logados.at(id).first;
+// refatorar código posteriormente
+for (int i = 0; i < Servidores.size(); i++)
+{
+	if(servidor == Servidores[i].get_id()){
+		for (int k = 0; k < Servidores[i].get_canais().size() ; k++)
+		{	// verifficando se o nome já existe
+			if(Servidores[i].get_canais()[k].get_name() == nome){
+				return "canal "+ nome + " já existente";
+			}	
+		}
+		
+		CanalTexto canal = CanalTexto(id,nome, dono_id(id));
+		Servidores[i].aumenta_id();
+		Servidores[i].add_canal(canal);
+		return "canal "+nome +" criado";
+	}
+}
+	return "não foi possível criar o servidor";
 }
 
 string Sistema::remove_channel(int id, const string nome) {
 if(!logado(id)){
 	return "Não está conectado";
 }
+
+
 	return "remove_channel NÃO IMPLEMENTADO";
 }
 
