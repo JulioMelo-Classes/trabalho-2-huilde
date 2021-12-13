@@ -204,6 +204,33 @@ src/Executor.cpp.s:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Executor.cpp.s
 .PHONY : src/Executor.cpp.s
 
+src/Menssagem.o: src/Menssagem.cpp.o
+
+.PHONY : src/Menssagem.o
+
+# target to build an object file
+src/Menssagem.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Menssagem.cpp.o
+.PHONY : src/Menssagem.cpp.o
+
+src/Menssagem.i: src/Menssagem.cpp.i
+
+.PHONY : src/Menssagem.i
+
+# target to preprocess a source file
+src/Menssagem.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Menssagem.cpp.i
+.PHONY : src/Menssagem.cpp.i
+
+src/Menssagem.s: src/Menssagem.cpp.s
+
+.PHONY : src/Menssagem.s
+
+# target to generate assembly for a file
+src/Menssagem.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/Menssagem.cpp.s
+.PHONY : src/Menssagem.cpp.s
+
 src/Servidor.o: src/Servidor.cpp.o
 
 .PHONY : src/Servidor.o
@@ -303,6 +330,9 @@ help:
 	@echo "... src/Executor.o"
 	@echo "... src/Executor.i"
 	@echo "... src/Executor.s"
+	@echo "... src/Menssagem.o"
+	@echo "... src/Menssagem.i"
+	@echo "... src/Menssagem.s"
 	@echo "... src/Servidor.o"
 	@echo "... src/Servidor.i"
 	@echo "... src/Servidor.s"

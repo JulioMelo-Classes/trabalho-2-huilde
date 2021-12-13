@@ -24,6 +24,13 @@ CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/Sistema.h
 CMakeFiles/concordo.dir/src/Executor.cpp.o: ../include/Usuario.h
 CMakeFiles/concordo.dir/src/Executor.cpp.o: ../src/Executor.cpp
 
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../include/CanalDeTexto.h
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../include/Menssagem.h
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../include/Servidor.h
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../include/Sistema.h
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../include/Usuario.h
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o: ../src/Menssagem.cpp
+
 CMakeFiles/concordo.dir/src/Servidor.cpp.o: ../include/CanalDeTexto.h
 CMakeFiles/concordo.dir/src/Servidor.cpp.o: ../include/Menssagem.h
 CMakeFiles/concordo.dir/src/Servidor.cpp.o: ../include/Servidor.h

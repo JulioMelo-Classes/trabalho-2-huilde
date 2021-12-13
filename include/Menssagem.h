@@ -17,7 +17,11 @@ Usuario* Remetente; // ponteiro para o quem enviou a menssagem
 string conteudo ; //String com o conteúdo da menssagem
 
 public:
-// a ser feito
+
+//construtor da classe_menssagem
+Menssagem(int id,std::string data, std::string menssagem, Usuario* quemenviou);
+
+
 };
 
 #endif

@@ -24,6 +24,13 @@ CMakeFiles/concordo.dir/src/Executor.cpp.o
  ../include/Sistema.h
  ../include/Usuario.h
  /home/adduser/itp/trabalho-2-huilde/src/Executor.cpp
+CMakeFiles/concordo.dir/src/Menssagem.cpp.o
+ ../include/CanalDeTexto.h
+ ../include/Menssagem.h
+ ../include/Servidor.h
+ ../include/Sistema.h
+ ../include/Usuario.h
+ /home/adduser/itp/trabalho-2-huilde/src/Menssagem.cpp
 CMakeFiles/concordo.dir/src/Servidor.cpp.o
  ../include/CanalDeTexto.h
  ../include/Menssagem.h

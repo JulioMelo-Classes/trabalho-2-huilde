@@ -28,7 +28,25 @@ CanalTexto(unsigned int id,string nome,Usuario* criador );
 
 string get_name();
 
-};
 
+
+/*! retorna o id do canal de texto
+	@return CanalDeTexto_id
+*/
+int get_id();
+
+
+/*! adiciona uma menssagem ao servidor
+
+*/
+void add_mensagem(string data_hora, string conteudo_da_mensagem,Usuario* dono);
+
+
+/*! retorna o vetor de menssagens
+	@return menssagens
+*/
+std::vector<Menssagem> get_mensagens();
+
+};
 
 #endif

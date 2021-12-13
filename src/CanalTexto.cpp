@@ -17,3 +17,18 @@ CanalTexto::CanalTexto(unsigned int id,string nome,Usuario* criador){
     CanalDeTexto_id = id;
     dono =  criador;
 }
+
+int CanalTexto::get_id(){
+    return CanalDeTexto_id;
+}
+
+void CanalTexto::add_mensagem(string data_hora,string conteudo_da_mensagem,Usuario* dono){
+    Menssagem nova = Menssagem( 0,data_hora, conteudo_da_mensagem,dono);
+    int id=0;
+    menssagens.push_back(nova);
+}
+
+
+std::vector<Menssagem> CanalTexto::get_mensagens(){
+    return menssagens;
+}

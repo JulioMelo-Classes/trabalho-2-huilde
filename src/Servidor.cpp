@@ -11,9 +11,9 @@ return Server_name;
 };
 
 Servidor::Servidor(int id,string nome,Usuario* dono){
-Server_id = id;
-Server_name = nome;
-Server_dono = dono;
+    Server_id = id;
+    Server_name = nome;
+    Server_dono = dono;
 }
 
 Usuario* Servidor::get_dono(){
