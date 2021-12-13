@@ -52,6 +52,11 @@ string get_senha();
 	/*! retorna a senha do usuario
 	@return senha registrada do usuário
 */
+
+/*! retorna o nome do usuario
+	@return User_name registrado no usuário
+*/
+string get_name();
 };
 
 #endif

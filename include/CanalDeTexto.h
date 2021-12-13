@@ -10,7 +10,7 @@
 class CanalTexto{
 private:
 
-unsigned int CanalDeTexto_id; //numero inteiro contendo id do servidor
+unsigned int CanalDeTexto_id; //numero inteiro contendo id do canal de texto
 
 std::string canal_name; // string contendo o nome do canal de texto
 

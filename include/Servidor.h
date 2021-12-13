@@ -11,6 +11,8 @@
 class Servidor{
 private:
 
+unsigned int canal_id= 0; // inteiro contendo o valor do canal de texto
+
 unsigned int Server_id; //numero inteiro contendo id do servidor
 
 std::string Server_name; // string contendo o nome do servidor
@@ -51,6 +53,32 @@ void set_descricao(string nome);
 */
 void set_codigo(string codigo);
 
+/*! retorna o o código do convite do servidor
+	@return codigoConvite
+*/
+
+string get_codigo();
+
+/*! retorna o array com os usuarios que participam do servidor
+	@return Participantes
+*/
+std::vector<Usuario*> get_Participantes();
+
+
+/*! retorna o id do servidor
+	@return Server_id
+*/
+unsigned int get_id();
+
+/*! adiciona um participante ao vetor Participantes
+	@param participante é o participante que será adicionado no vetor
+*/
+void add_participante(Usuario* participante);
+
+void add_menssagem(Menssagem menssagem);
+
+
 };
+
 
 #endif

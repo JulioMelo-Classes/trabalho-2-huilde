@@ -27,3 +27,19 @@ void Servidor::set_descricao(string nome){
 void Servidor::set_codigo(string codigo){
     codigoConvite = codigo;
 }
+
+string Servidor::get_codigo(){
+    return codigoConvite;
+}
+std::vector<Usuario*> Servidor::get_Participantes(){
+    return Participantes;
+}
+
+unsigned int Servidor::get_id(){
+    return Server_id;
+}
+
+void Servidor::add_participante(Usuario* participante){
+    Participantes.push_back(participante);
+}
+

@@ -34,4 +34,8 @@ return User_id;
 
 string Usuario::get_senha(){
     return User_senha;
-};
+}
+
+string Usuario::get_name(){
+    return User_name;
+}
