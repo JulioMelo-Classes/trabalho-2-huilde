@@ -323,15 +323,16 @@ string Sistema::remove_channel(int id, const string nome) {
 if(!logado(id)){
 	return "Não está conectado";
 }
-int servidor = Usuarios_logados.at(id).first;
-int canal = Usuarios_logados.at(id).second;
-		for (int k = 0; k < Servidores[i].get_canais().size() ; k++)
-		{	// verifficando se o nome já existe
-			if(Servidores[servidor].get_canais()[k].  == nome){
-				return "canal "+ nome + " já existente";
-			}	
-		}
-		Servidores[i].add_canal(canal);
+	// funcionalidade não implementada
+// int servidor = Usuarios_logados.at(id).first;
+// int canal = Usuarios_logados.at(id).second;
+// 		for (int k = 0; k < Servidores[i].get_canais().size() ; k++)
+// 		{	// verifficando se o nome já existe
+// 			if(Servidores[servidor].get_canais()[k].  == nome){
+// 				return "canal "+ nome + " já existente";
+// 			}	
+// 		}
+// 		Servidores[i].add_canal(canal);
 
 
 
