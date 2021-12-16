@@ -339,6 +339,8 @@ if(!logado(id)){
 	return "Canal removido";
 }
 
+//checkin 4.1 e 4.2 70%
+//vc vilou a condição que impede o retoro de vetores!
 string Sistema::enter_channel(int id, const string nome) {
 	if(!logado(id)){
 		return "Não está conectado";
@@ -349,6 +351,8 @@ string Sistema::enter_channel(int id, const string nome) {
 
 		if(Servidores[servidor].get_canais()[i].get_name()==nome){
 
+			//aqui vc não deve retornar o vetor, ao invés disso vc pode fazer um método em
+			//Servidor que retorna o id do canal, dado o nome.
 			Usuarios_logados.at(id).second = Servidores[servidor].get_canais()[i].get_id();
 			return"Entrou no canal "+nome;
 		}
@@ -365,6 +369,7 @@ string Sistema::leave_channel(int id) {
 		return "Você deixou o canal";
 }
 
+//checkin 4.3 e 4.4 60% apenas a classe canal foi implementada esse método aqui não irá funcionar
 string Sistema::send_message(int id, const string mensagem) {
 	if(!logado(id)){
 		return "Não está conectado";
@@ -376,6 +381,11 @@ string Sistema::send_message(int id, const string mensagem) {
 	}
 
 	Usuario* remetente = Usuarios_criados[id];
+
+	//aqui vc fez o correto em criar o objeto mensagem apenas dentro do obojeto Canal, porém
+	//está retornando um vetor através de get_canais o que está errado. Além disso o vetor que vc
+	//usa contém cópias dos canais que estão no servidor, logo esse método não terá efeito prático! Uma vez
+	//que a mensagem será adicionanda na cópia e não no canal desejado
 	Servidores[servidor].get_canais()[canal].add_mensagem("hora",mensagem,remetente);
 	return "Menssagem enviado com sucesso";
 }

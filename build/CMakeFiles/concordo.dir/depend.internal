@@ -7,7 +7,7 @@ CMakeFiles/concordo.dir/src/CanalTexto.cpp.o
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/CanalTexto.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/CanalTexto.cpp
 CMakeFiles/concordo.dir/src/Concordo.cpp.o
  ../include/CanalDeTexto.h
  ../include/Executor.h
@@ -15,7 +15,7 @@ CMakeFiles/concordo.dir/src/Concordo.cpp.o
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Concordo.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Concordo.cpp
 CMakeFiles/concordo.dir/src/Executor.cpp.o
  ../include/CanalDeTexto.h
  ../include/Executor.h
@@ -23,32 +23,32 @@ CMakeFiles/concordo.dir/src/Executor.cpp.o
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Executor.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Executor.cpp
 CMakeFiles/concordo.dir/src/Menssagem.cpp.o
  ../include/CanalDeTexto.h
  ../include/Menssagem.h
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Menssagem.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Menssagem.cpp
 CMakeFiles/concordo.dir/src/Servidor.cpp.o
  ../include/CanalDeTexto.h
  ../include/Menssagem.h
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Servidor.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Servidor.cpp
 CMakeFiles/concordo.dir/src/Sistema.cpp.o
  ../include/CanalDeTexto.h
  ../include/Menssagem.h
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Sistema.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Sistema.cpp
 CMakeFiles/concordo.dir/src/Usuario.cpp.o
  ../include/CanalDeTexto.h
  ../include/Menssagem.h
  ../include/Servidor.h
  ../include/Sistema.h
  ../include/Usuario.h
- /home/adduser/itp/trabalho-2-huilde/src/Usuario.cpp
+ /home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/src/Usuario.cpp

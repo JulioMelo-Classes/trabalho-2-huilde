@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/adduser/itp/trabalho-2-huilde/include 
+CXX_INCLUDES = -I/home/julio/lp1/2021.2/trabalho2/trabalho-2-huilde/include 
 

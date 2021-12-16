@@ -28,7 +28,7 @@ void CanalTexto::add_mensagem(string data_hora,string conteudo_da_mensagem,Usuar
     menssagens.push_back(nova);
 }
 
-
+//isso aqui viola a condição do trabalho!!! você não pode retornar esse vetor
 std::vector<Menssagem> CanalTexto::get_mensagens(){
     return menssagens;
 }
